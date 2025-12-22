@@ -1,0 +1,136 @@
+.dashboard {
+  padding: 30px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.columns {
+  display: flex;
+  gap: 24px;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.task-column {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 16px;
+  width: 300px;
+  min-height: 420px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.task-card {
+  background: rgba(255,255,255,0.1);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+}
+
+/* Column highlight */
+.task-column.drag-over {
+  outline: 2px dashed var(--primary);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+/* Card drag effect */
+.task-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.task-card:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.loader {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.task-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+/* Input container */
+.task-input-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.task-label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  opacity: 0.8;
+}
+
+/* Input field */
+.task-input-box input {
+  height:40px;
+  width: 150px;
+  padding: 0 18px;
+  border-radius: 14px;
+  border: 2px solid black;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.task-input-box input:focus {
+  outline: 2px solid #7c8cff;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Add Task Button */
+.add-task-btn {
+  height: 40px;
+  padding: 0 26px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #7c8cff, #9f7aea);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  right: 1120px;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+
