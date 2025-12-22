@@ -1,16 +1,40 @@
-# React + Vite
+# KanbanFlow Task Manager 🗂️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Kanban Task Management Web Application** built using **React + Vite** with authentication, drag-and-drop task handling, and dark/light theme support.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🔐 User Authentication (Register & Login)
+- 📋 Kanban Board with:
+  - To Do
+  - In Progress
+  - Done
+- 🔄 Drag & Drop tasks between columns
+- ➕ Add, 🗑️ Delete, ♻️ Move tasks
+- 🌙 Dark / ☀️ Light theme toggle
+- 🔔 Toast notifications for actions
+- ⚡ Fast development with Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React
+- Vite
+- React Router
+- React Icons
+- React Hot Toast
+- CSS (Modern UI)
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+
+---
+
+## 📂 Project Structure
