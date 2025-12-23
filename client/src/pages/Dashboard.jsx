@@ -124,7 +124,7 @@ const moveTask = async (taskId, newStatus) => {
       </div>
 
       {/* ADD TASK */}
-      <div className="task-input-wrapper">
+      {/* <div className="task-input-wrapper">
   <div className="task-input-box">
     <label className="task-label">New Task</label>
     <input
@@ -136,6 +136,22 @@ const moveTask = async (taskId, newStatus) => {
 
   <button className="add-task-btn" onClick={addTask}>
     + Add Task
+  </button>
+</div> */}
+
+    <div className="task-input-wrapper">
+  <div className="task-input-box">
+    <span className="task-input-label">New Task</span>
+
+    <input
+      type="text"
+      value={newTask}
+      onChange={(e) => setNewTask(e.target.value)}
+    />
+  </div>
+
+  <button className="add-task-btn" onClick={addTask}>
+    + Add
   </button>
 </div>
 

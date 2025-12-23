@@ -4,7 +4,8 @@ import toast from "react-hot-toast";
 import api from "../services/api";
 
 export default function Register() {
-  const [name, setName] = useState("");
+  const [FirstName, setFirstName] = useState("");
+  const [SecondName, setSecondName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -14,7 +15,7 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password) {
+    if (!FirstName || !SecondName || !email || !password) {
       toast.error("All fields are required");
       return;
     }
@@ -22,8 +23,8 @@ export default function Register() {
     try {
       setLoading(true);
 
-      const res = await api.post("/auth/register", {
-        name,        // ✅ MUST be "name"
+      await api.post("/auth/register", {
+        name: `${FirstName} ${SecondName}`, // ✅ MATCHES BACKEND
         email,
         password,
       });
@@ -51,14 +52,21 @@ export default function Register() {
         <form onSubmit={handleRegister}>
           <input
             type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            placeholder="First Name"
+            value={FirstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+
+          <input
+            type="text"
+            placeholder="Second Name"
+            value={SecondName}
+            onChange={(e) => setSecondName(e.target.value)}
           />
 
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
