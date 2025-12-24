@@ -1,0 +1,64 @@
+/* ===================== GLOBAL RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans Flex", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.dashboard {
+  padding: 30px;
+  max-height: 100vh;
+  overflow: hidden;
+
+  /* FIX */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dashboard-header {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* ===================== THEME VARIABLES ===================== */
+:root {
+  /* Backgrounds */
+  --bg-dark: linear-gradient(135deg, #0f172a, #020617);
+  --bg-light: linear-gradient(135deg, #f8fafc, #e2e8f0);
+
+  /* Cards */
+  --card-dark: rgba(30, 41, 59, 0.9);
+  --card-light: rgba(255, 255, 255, 0.9);
+
+  /* Text */
+  --text-dark: #f8fafc;
+  --text-light: #0f172a;
+
+  /* Primary / Accent */
+  --primary: #7c8cff;
+  --accent: #9f7aea;
+
+  /* Glass blur */
+  --blur: blur(18px);
+}
+
+/* ===================== APPLY THEME ===================== */
+body[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --card: var(--card-dark);
+  --text: var(--text-dark);
+}
+
+body[data-theme="light"] {
+  --bg: var(--bg-light);
+  --card: var(--card-light);
+  --text: var(--text-light);
+}
