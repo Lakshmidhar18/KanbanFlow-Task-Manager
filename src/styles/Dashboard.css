@@ -256,6 +256,92 @@
   }
 }
 
+/* ===================== MOBILE RESPONSIVENESS ===================== */
+@media (max-width: 768px) {
+
+  /* Header */
+  .dashboard-header {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  /* Main container */
+  .dashboard-inner {
+    margin: 20px 12px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  /* Columns stack */
+  .columns {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .task-column {
+    width: 100%;
+    min-height: auto;
+    animation: none; 
+  }
+
+  /* Task cards */
+  .task-card {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Input area */
+  .task-input-wrapper {
+    margin: 24px 0;
+  }
+
+  .task-input-box {
+    max-width: 100%;
+  }
+
+  .task-input-box input {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  .add-task-btn {
+    height: 46px;
+    font-size: 14px;
+  }
+
+  /* Logout button */
+  .logout-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Theme toggle */
+  .theme-toggle {
+    right: 16px;
+    bottom: px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ===================== EXTRA SMALL PHONES ===================== */
+@media (max-width: 480px) {
+
+  .dashboard-inner {
+    margin: 14px 8px;
+    padding: 16px;
+  }
+
+  .task-card {
+    font-size: 13px;
+  }
+
+  .task-input-label {
+    font-size: 12px;
+  }
+}
+
   /* ===================== THEME TOGGLE ===================== */
   .theme-toggle {
     position: fixed;
